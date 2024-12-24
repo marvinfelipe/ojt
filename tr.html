@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb5/J8KlT6TWImHbJ09T9G+GrI+v3bM5YxVjM"
+        crossorigin="anonymous"
+    >
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">Arduino Project</h1>
+        <img
+            src="https://raw.githubusercontent.com/marvinfelipe/ojt/main/rs1.jpg"
+            alt="Arduino Project"
+            class="img-fluid rounded shadow"
+            id="projectImage"
+            style="cursor: pointer;"
+        />
+        <p>Click the image to learn more!</p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Arduino Project</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    This is an example of an Arduino project. Explore more about the capabilities of microcontrollers and how they can be used in IoT and robotics.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoMqwXg6hz37bpk0X5r3hPI3Ghv0bViEJk6xE91D6yKj0Q5"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- JavaScript to Trigger Modal -->
+    <script>
+        document.getElementById('projectImage').addEventListener('click', function () {
+            const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            modal.show();
+        });
+    </script>
+</body>
+</html>
